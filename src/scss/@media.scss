@@ -1,0 +1,51 @@
+
+@media screen and (min-width: 1440px) {
+  .container{
+    width: 1040px;
+  }
+  .background__text {
+    font-size: 129px;
+  }
+  .description__title{
+    font-size: 77px;
+  }
+}
+@media screen and (max-width: 1150px){
+    .background{
+      visibility: hidden;
+    }
+    
+    
+  .main{
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "text"
+      "form"
+      "gift"
+      "about-autor";
+    text-align: center;
+    margin-top: 0;
+    &__form-wrap{
+      margin: 40px 21px;
+      width: 100%;
+    }
+    
+  }
+  .iti{
+    display: block !important;
+  }
+
+  .main__form {
+    margin-left: 0;
+    max-width: 100%;
+  }
+  
+  .description__header,
+  .description__text,
+  .description__about-autor,
+  .description__gift {
+    margin-right: 0;
+    max-width: 100%;
+  }
+}

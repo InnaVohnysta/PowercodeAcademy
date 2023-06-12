@@ -1,0 +1,152 @@
+@import "reset";
+@import "variables";
+@import "fonts";
+@import "header";
+@import "main";
+@import "footer";
+@import "modal";
+
+
+html{
+  font-size: 14px;
+}
+
+body{
+  font-family: Gilroy;
+  background-color: $background;
+  color: $maincolor;
+}
+
+.wraper{
+  position: relative;
+  overflow: auto;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.container{
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, 0);
+  width: 72.22vw;
+}
+
+@media screen and (min-width: 1440px) {
+  .container{
+    width: 1040px;
+  }
+  .background__text {
+    font-size: 129px;
+  }
+  .description__title{
+    font-size: 77px;
+  }
+}
+@media screen and (max-width: 1150px){
+  .wraper::before{
+    content: '';
+    position: absolute;
+    top: 30%;
+    background: $ellipse;
+    width: 1000px;
+    height: 1000px;
+    opacity: 0.8;
+    filter: blur(103.131px);
+  }
+  .background{
+    visibility: hidden;
+  }
+  .main{
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "text"
+      "form"
+      "gift"
+      "about-autor";
+    text-align: center;
+    margin-top: 0;
+    &__form-wrap{
+      margin: 40px 21px;
+      width: 100%;
+    }
+    
+  }
+  .description__text{
+    text-align: center;
+  }
+  .description__text-accent{
+    background: none;
+  }
+  .accent-mobile{
+    color: $secondary1;
+  }
+  .description__title{
+    font-size: 52.7273px;
+    line-height: 65px;
+  }
+  // .iti{
+  //   display: block !important;
+  // }
+  
+
+  .main__form {
+    margin-left: 0;
+    max-width: 100%;
+  }
+
+  .description__header,
+  .description__text,
+  .description__about-autor,
+  .description__gift {
+    margin-right: 0;
+    max-width: 100%;
+  }
+  .description__name{
+    margin: 0 auto;
+  }
+  .gift,.about-autor{
+    margin: 0 auto;
+  }
+  .gift{
+    padding-top: 36px;
+  }
+  .about-autor{
+    padding-top: 22px;
+  }
+}
+@media screen and (max-width: 836px){
+  .header{
+    padding: 28px 30px;
+    &__logo img{
+      width: 100px;
+    }
+    &__date,&__time{
+      width: 88px;
+      font-size: 11px;
+      line-height: 8px;
+    }
+    &__date::before,&__info::before{
+      width: 12.5px;
+      height: 12.5px;
+    }
+  }
+  .container{
+    width: 100%;
+    padding: 0 16px;
+  }
+  .main{
+    margin-left: 0;
+  }
+  .gift,.about-autor{
+    width: 223px;
+    margin: 0 auto;
+  }
+}
+
+
+
+

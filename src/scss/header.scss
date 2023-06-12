@@ -1,0 +1,40 @@
+.header{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 24px 56px;
+  &__info{
+    display: flex;
+    gap: 18px;
+  }
+  &__date,&__time{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    width: 141px;
+    height: 40px;
+    background: #302E5A;
+    border-radius: 10px;
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+  }
+  &__date::before{
+    content: '';
+    display: block;
+    width: 15px;
+    height: 15px;
+    background-image: url(../img/calendar_today.svg);
+    background-size: contain;
+  }
+  &__time::before{
+    content: '';
+    display: block;
+    width: 15px;
+    height: 15px;
+    background-image: url(../img/gg_time.svg);
+    background-size: contain;
+  }
+}
