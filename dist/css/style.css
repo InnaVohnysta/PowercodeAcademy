@@ -120,6 +120,7 @@ button {
 .header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width: 100%;
   padding: 24px 56px;
 }
@@ -384,13 +385,6 @@ button {
   margin-left: auto;
 }
 
-.description__header,
-.description__text,
-.description__about-autor,
-.description__gift {
-  margin-right: auto;
-}
-
 .description__name {
   display: flex;
   align-items: center;
@@ -437,6 +431,10 @@ button {
   transform: rotate(-3.51deg);
 }
 .description__subtitle-wrap > span {
+  font-weight: 800;
+  font-size: 23.6391px;
+  line-height: 29px;
+  text-transform: uppercase;
   display: inline-block;
   transform: rotate(3.51deg);
 }
@@ -457,9 +455,6 @@ button {
   font-weight: 700;
   font-size: 17.332px;
   line-height: 148%;
-}
-.description__about-autor, .description__gift {
-  max-width: 375px;
 }
 
 .about-autor {
@@ -486,6 +481,7 @@ button {
   color: #4252D1;
 }
 .about-autor__text {
+  width: 307px;
   font-weight: 400;
   font-size: 12px;
   line-height: 160%;
@@ -511,6 +507,7 @@ button {
   line-height: 148%;
 }
 .gift__text {
+  width: 210px;
   font-weight: 400;
   font-size: 12px;
   line-height: 160%;
@@ -758,6 +755,10 @@ body {
   width: 72.22vw;
 }
 
+.accent-mobile {
+  display: block;
+}
+
 @media screen and (min-width: 1440px) {
   .container {
     width: 1040px;
@@ -775,8 +776,8 @@ body {
     position: absolute;
     top: 30%;
     background: #332F65;
-    width: 1000px;
-    height: 1000px;
+    width: 100%;
+    height: 100%;
     opacity: 0.8;
     filter: blur(103.131px);
   }
@@ -784,63 +785,106 @@ body {
     visibility: hidden;
   }
   .main {
+    margin: 0 auto;
     grid-template-columns: 1fr;
     grid-template-areas: "header" "text" "form" "gift" "about-autor";
     text-align: center;
     margin-top: 0;
   }
+  .main__form {
+    margin: 0 auto;
+    width: 328px;
+  }
+  .main__form-header {
+    font-size: 20px;
+    line-height: 23px;
+  }
   .main__form-wrap {
     margin: 40px 21px;
     width: 100%;
   }
+  .main__form-footer {
+    font-size: 11px;
+    line-height: 149%;
+  }
+  .description__header, .description__text {
+    margin: 0 auto;
+    width: 328px;
+  }
   .description__text {
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 148%;
     text-align: center;
   }
   .description__text-accent {
     background: none;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 148%;
+    padding: 0;
   }
   .accent-mobile {
+    display: block;
     color: #4252D1;
   }
   .description__title {
     font-size: 52.7273px;
     line-height: 65px;
   }
-  .main__form {
-    margin-left: 0;
-    max-width: 100%;
+  .description__subtitle {
+    font-size: 15px;
+    line-height: 18px;
+    margin-bottom: 16px;
   }
-  .description__header,
-  .description__text,
-  .description__about-autor,
-  .description__gift {
-    margin-right: 0;
-    max-width: 100%;
+  .form__button {
+    background: #0048FF;
+    width: 222px;
+    padding: 12px 35px;
+    line-height: 22px;
   }
   .description__name {
     margin: 0 auto;
   }
   .gift, .about-autor {
     margin: 0 auto;
+    text-align: left;
   }
   .gift {
     padding-top: 36px;
   }
+  .gift__text {
+    width: 161px;
+  }
   .about-autor {
     padding-top: 22px;
+  }
+  .about-autor__text {
+    width: 161px;
   }
 }
 @media screen and (max-width: 836px) {
   .header {
-    padding: 28px 30px;
+    justify-content: center;
+    gap: 35px;
+    padding: 28px 0px 36px 14px;
   }
   .header__logo img {
     width: 100px;
   }
   .header__date, .header__time {
-    width: 88px;
+    border-radius: 5.93333px;
+    gap: 6px;
+    width: max-content;
+    height: 24px;
     font-size: 11px;
     line-height: 8px;
+  }
+  .header__date {
+    padding: 0 6px;
+  }
+  .header__time {
+    padding: 0 12px;
   }
   .header__date::before, .header__info::before {
     width: 12.5px;
@@ -853,8 +897,17 @@ body {
   .main {
     margin-left: 0;
   }
-  .gift, .about-autor {
-    width: 223px;
-    margin: 0 auto;
+  .description__header {
+    padding: 0 18px;
+  }
+  .description__subtitle {
+    text-align: left;
+  }
+  .description__subtitle-wrap {
+    padding: 5px 9px;
+    margin-right: 11px;
+  }
+  .description__subtitle-wrap > span {
+    font-size: 16px;
   }
 }

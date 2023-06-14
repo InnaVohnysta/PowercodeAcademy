@@ -1,21 +1,22 @@
 <?php
-if ($_SERVER["REQUEST_METHOD"] === "POST") {
-  $name = $_POST["name"];
-  $email = $_POST["email"];
-  $phone = $_POST["phone"];
+if( !empty($_POST) ) {
+        $message = 
+        "Новое сообщение от пользователя " . $_POST['name'] . 
+        "\n" ."Отправитель: " . $_POST['name'] . 
+        "\n" . "E-mail: " . $_POST['email'] . 
+        "\n" . "Телефон: 
+        \n " . $_POST['phone'];
 
-  // Виконати логіку для надсилання листа на електронну пошту
-  $to = "innavohnysta@gmail.com";
-  $subject = "Нова форма зворотного зв'язку";
-  $message = "Ім'я: $name\n";
-  $message .= "Електронна пошта: $email\n";
-  $message .= "Телефон: $phone\n";
-  $headers = "From: $email";
-
-  if (mail($to, $subject, $message, $headers)) {
-    http_response_code(200);
-  } else {
-    http_response_code(500);
-  }
-}
+        $sendMail = mail( "designer.web.studio.rgb@gmail.com", "Новое сообщение", $message );
+        if( $sendMail ) {
+            echo "Письмо успешно отправлено!";
+			echo "<br /><br /><a href='/'>Вернуться на сайт.</a>";
+        } else {
+            echo "Упс ... кажется что-то пошло не так";
+        }
+    }
 ?>
+<script language="JavaScript" type="text/javascript">
+function changeurl(){eval(self.location="/");}
+window.setTimeout("changeurl();",3000);
+</script>

@@ -33,7 +33,9 @@ body{
   transform: translate(-50%, 0);
   width: 72.22vw;
 }
-
+.accent-mobile{
+  display: block;
+}
 @media screen and (min-width: 1440px) {
   .container{
     width: 1040px;
@@ -51,8 +53,8 @@ body{
     position: absolute;
     top: 30%;
     background: $ellipse;
-    width: 1000px;
-    height: 1000px;
+    width: 100%;
+    height:100%;
     opacity: 0.8;
     filter: blur(103.131px);
   }
@@ -60,6 +62,7 @@ body{
     visibility: hidden;
   }
   .main{
+    margin: 0 auto;
     grid-template-columns: 1fr;
     grid-template-areas:
       "header"
@@ -69,64 +72,102 @@ body{
       "about-autor";
     text-align: center;
     margin-top: 0;
+    &__form{
+      margin: 0 auto;
+      width: 328px;
+    }
+    &__form-header{
+      font-size: 20px;
+      line-height: 23px;
+    }
     &__form-wrap{
       margin: 40px 21px;
       width: 100%;
     }
-    
+    &__form-footer{
+      font-size: 11px;
+      line-height: 149%;
+    }
+  }
+  .description__header, .description__text{
+    margin: 0 auto;
+    width: 328px;
   }
   .description__text{
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 148%;
     text-align: center;
   }
   .description__text-accent{
     background: none;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 148%;
+    padding: 0;
   }
   .accent-mobile{
+    display: block;
     color: $secondary1;
   }
   .description__title{
     font-size: 52.7273px;
     line-height: 65px;
   }
-  .form__button{
-    background: #0048FF;
+  .description__subtitle{
+    font-size: 15px;
+    line-height: 18px;
+    margin-bottom: 16px;
   }
   
-  .main__form {
-    margin-left: 0;
-    max-width: 100%;
+  .form__button{
+    background: #0048FF;
+    width: 222px;
+    padding: 12px 35px;
+    line-height: 22px;
   }
-
-  .description__header,
-  .description__text,
-  .description__about-autor,
-  .description__gift {
-    margin-right: 0;
-    max-width: 100%;
-  }
+  
   .description__name{
     margin: 0 auto;
   }
   .gift,.about-autor{
     margin: 0 auto;
+    text-align: left;
   }
   .gift{
     padding-top: 36px;
+    &__text{
+      width: 161px;
+    }
   }
   .about-autor{
     padding-top: 22px;
+    &__text{
+      width: 161px;
+    }
   }
 }
 @media screen and (max-width: 836px){
   .header{
-    padding: 28px 30px;
+    justify-content: center;
+    gap: 35px;
+    padding: 28px 0px 36px 14px;
     &__logo img{
       width: 100px;
     }
     &__date,&__time{
-      width: 88px;
+      border-radius: 5.93333px;
+      gap: 6px;
+      width: max-content;
+      height: 24px;
       font-size: 11px;
       line-height: 8px;
+    }
+    &__date{
+      padding: 0 6px;
+    }
+    &__time{
+      padding: 0 12px;
     }
     &__date::before,&__info::before{
       width: 12.5px;
@@ -140,12 +181,20 @@ body{
   .main{
     margin-left: 0;
   }
-  .gift,.about-autor{
-    width: 223px;
-    margin: 0 auto;
+  .description__header{
+    padding: 0 18px;
+  }
+  .description__subtitle{
+    text-align: left;
+  }
+  .description__subtitle-wrap{
+    padding: 5px 9px;
+    margin-right: 11px;
+    &>span{
+      font-size: 16px;
+    }
   }
 }
-
 
 
 

@@ -229,13 +229,6 @@
   margin-left: auto;
 }
 
-.description__header,
-.description__text,
-.description__about-autor,
-.description__gift {
-  margin-right: auto;
-}
-
 .description{
   &__name{
     display: flex;
@@ -281,6 +274,10 @@
       border-radius: 5px;
       transform: rotate(-3.51deg);
       & > span{
+        font-weight: 800;
+        font-size: 23.6391px;
+        line-height: 29px;
+        text-transform: uppercase;
         display: inline-block;
         transform: rotate(3.51deg);
       }
@@ -303,9 +300,6 @@
       font-size: 17.332px;
       line-height: 148%;
     }
-  }
-  &__about-autor,&__gift{
-    max-width: 375px;
   }
 }
 .about-autor{
@@ -331,6 +325,7 @@
     }
   }
   &__text{
+    width: 307px;
     font-weight: 400;
     font-size: 12px;
     line-height: 160%;
@@ -355,6 +350,7 @@
     line-height: 148%;
   }
   &__text{
+    width: 210px;
     font-weight: 400;
     font-size: 12px;
     line-height: 160%;
@@ -457,4 +453,3 @@ input[type="tel"]{
 .iti__country-list::-webkit-scrollbar-thumb:hover {
   background-color: $secondary3;
 }
-
