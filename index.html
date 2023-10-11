@@ -5,12 +5,15 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css">
-<link rel="stylesheet"  href="css/style.min.css">
-<script defer src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
-<script defer src="js/app.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css?_v=20231011114945">
+<link rel="stylesheet"  href="css/style.min.css?_v=20231011114945">
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js?_v=20231011114945"></script>
+<script defer src="js/app.min.js?_v=20231011114945"></script>
 </head>
-<body >
+<body class="iti-mobile">
+<div class="preloader">
+<div class="preloader__spinner"></div>
+</div>
 <div class="wraper ">
 <div class="background">
 <div class="background__ellipse-left"></div>
@@ -61,6 +64,7 @@
 <div class="form__input-container">
 <input type="tel" id="phone" name="phone" required>
 <span for="phone" id="phone-format" class="placeholder phone-format"></span>
+<div class="dropdown-container" id="dropdown-container"></div>
 </div>
 <div class="form__input-container">
 <input type="email" id="email" name="email" placeholder="Ваш email"  required>
